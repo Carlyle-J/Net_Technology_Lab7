@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @Html.Partial("_StudentInfo")
+    <form action="Create" method="post">
+        <table>
+            <tr>
+                <td>@Html.Label("EnrollmentNo")</td>
+                <td>@Html.TextBox("EnrollmentNo")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Name")</td>
+                <td>@Html.TextBox("Name")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Subject")</td>
+                <td>@Html.TextBox("Subject")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Rating")</td>
+                <td>@Html.TextBox("Rating")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Comments")</td>
+                <td>@Html.TextArea("Comments")</td>
+            </tr>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <p>@Html.ActionLink("Back to Home Page", "Index", "Feedback")</p>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+﻿@model List<StudentFeedbackMVC.Models.Feedback>
+@{
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Student Feedback List</h2>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Enrollmen No</th>
+                <th>Student Name</th>
+                <th>Subject</th>
+                <th>Rating</th>
+                <th>Comments</th>
+            </tr>
+
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>@i.EnrollmentNo</td>
+                    <td>@i.Name</td>
+                    <td>@i.Subject</td>
+                    <td>@i.Rating</td>
+                    <td>@i.Comments</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <p>@Html.ActionLink("Back to Home Page", "Index", "Feedback")</p>
+</body>
+</html>
+
+
+
